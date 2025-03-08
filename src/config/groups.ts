@@ -37,3 +37,18 @@ export const groups: Group[] = [
   //   members: [ 'ai8', 'ai4', 'ai5', 'ai6', 'ai7'],
   // }
 ];
+
+{
+    model: "deepseek-chat",
+    apiKey: process.env.DEEPSEEK_API_KEY,
+    baseURL: "https://api.deepseek.com/v1"  // DeepSeek API的基础URL[^36^]
+}
+
+{
+    id: "deepseek_assistant",
+    name: "DeepSeek助手",
+    personality: "智能且高效的AI助手",
+    model: "deepseek-chat",
+    avatar: "/avatars/deepseek.png",
+    custom_prompt: "你是一个智能的助手，擅长处理各种任务。"
+}
