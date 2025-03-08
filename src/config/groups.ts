@@ -38,12 +38,38 @@ export const groups: Group[] = [
   // }
 ];
 
-{
+
+// config/aiCharacters.ts
+
+export const aiCharacters = [
+    // 配置千问模型
+    {
+        model: "dashscope-v1",  // 模型名称，根据实际模型名称填写
+        apiKey: process.env.DASHSCOPE_API_KEY,  // 使用环境变量获取API密钥
+        baseURL: "https://api.dashscope.com/v1",  // 千问模型的基础URL，根据实际API文档填写
+        name: "千问助手",
+        personality: "智能且友好的AI助手",
+        avatar: "/avatars/dashscope.png",
+        custom_prompt: "你是一个智能的AI助手，擅长处理各种问题。"
+    },
+
+    // 配置豆包模型
+    {
+        model: "ark-v1",  // 模型名称，根据实际模型名称填写
+        apiKey: process.env.ARK_API_KEY,  // 使用环境变量获取API密钥
+        baseURL: "https://api.ark.com/v1",  // 豆包模型的基础URL，根据实际API文档填写
+        name: "豆包助手",
+        personality: "高效且专业的AI助手",
+        avatar: "/avatars/ark.png",
+        custom_prompt: "你是一个高效的AI助手，能够快速解决问题。"
+    }
+
+  {
     model: "deepseek-chat",
     apiKey: process.env.DEEPSEEK_API_KEY,
     baseURL: "https://api.deepseek.com/v1"  // DeepSeek API的基础URL[^36^]
 }
-
+//配置deepseek模型
 {
     id: "deepseek_assistant",
     name: "DeepSeek助手",
@@ -52,3 +78,5 @@ export const groups: Group[] = [
     avatar: "/avatars/deepseek.png",
     custom_prompt: "你是一个智能的助手，擅长处理各种任务。"
 }
+
+];
